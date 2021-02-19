@@ -1,5 +1,5 @@
 #health management system
-#3 clients -harry , vsibhav , samarth
+#3 clients -harry , vaibhav , samarth
 
 def getdate():
     import datetime
@@ -11,21 +11,28 @@ def harry_exc():
     date = getdate()
     f = open("he.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
+
     f.close()
 def Vaibhav_exc():
     Excersize_name = input("Which Excersize You Complete mr Vaibhav ==>>")
     date = getdate()
     f = open("ve.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
     f.close()
 def samarth_exc():
     Excersize_name = input("Which Excersize You Complete mr Samrth ==>>")
     date = getdate()
     f = open("se.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
     f.close()
 
 def harry_exc_show():
@@ -59,21 +66,27 @@ def harry_food():
     date = getdate()
     f = open("hf.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
     f.close()
 def Vaibhav_food():
     Excersize_name = input("Which Food You ate mr Vaibhav ==>>")
     date = getdate()
     f = open("vf.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
     f.close()
 def samarth_food():
     Excersize_name = input("Which Food You ate mr Samrth ==>>")
     date = getdate()
     f = open("sf.txt", "a")
     f.write("\n")
-    f.write(str(date) + Excersize_name)
+    f.write(str(date))
+    f.write("\t")
+    f.write(Excersize_name)
     f.close()
 
 def harry_food_show():
