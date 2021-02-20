@@ -6,150 +6,91 @@ def getdate():
     return datetime.datetime.now()
 
 # Excersixe Functions
-def harry_exc():
+def exc(a):
     Excersize_name = input("Which Excersize You Complete mr harry ==>>")
     date = getdate()
-    f = open("he.txt", "a")
+    f = open(a, "a")
     f.write("\n")
+    f.write("[")
     f.write(str(date))
+    f.write("]")
     f.write("\t")
     f.write(":")
     f.write("\t")
     f.write(Excersize_name)
 
     f.close()
-def Vaibhav_exc():
-    Excersize_name = input("Which Excersize You Complete mr Vaibhav ==>>")
-    date = getdate()
-    f = open("ve.txt", "a")
-    f.write("\n")
-    f.write(str(date))
-    f.write("\t")
-    f.write(":")
-    f.write("\t")
-    f.write(Excersize_name)
-    f.close()
-def samarth_exc():
-    Excersize_name = input("Which Excersize You Complete mr Samrth ==>>")
-    date = getdate()
-    f = open("se.txt", "a")
-    f.write("\n")
-    f.write(str(date))
-    f.write("\t")
-    f.write(":")
-    f.write("\t")
-    f.write(Excersize_name)
-    f.close()
+    print("well Done Keep up\n")
 
-def harry_exc_show():
-    f = open("he.txt")
+def exc_show(a):
+    f = open(a)
     content = f.read()
     print(content)
 
     f.close()
 
-def Vaibhav_exc_show():
-    f = open("ve.txt")
-    content = f.read()
-    print(content)
-
-    f.close()
-
-def samarth_exc_show():
-    f = open("se.txt")
-    content = f.read()
-    print(content)
-
-    f.close()
 
 
 
 #FoodFunctions
 
 
-def harry_food():
-    Excersize_name = input("Which Food You ate Mr Harry ==>>")
+def food(b):
+    Excersize_name = input("Which Food You ate ",b," ==>>")
     date = getdate()
-    f = open("hf.txt", "a")
+    f = open(b, "a")
     f.write("\n")
+    f.write("[")
     f.write(str(date))
+    f.write("]")
     f.write("\t")
     f.write(":")
     f.write("\t")
     f.write(Excersize_name)
     f.close()
-def Vaibhav_food():
-    Excersize_name = input("Which Food You ate mr Vaibhav ==>>")
-    date = getdate()
-    f = open("vf.txt", "a")
-    f.write("\n")
-    f.write(str(date))
-    f.write("\t")
-    f.write(":")
-    f.write("\t")
-    f.write(Excersize_name)
-    f.close()
-def samarth_food():
-    Excersize_name = input("Which Food You ate mr Samrth ==>>")
-    date = getdate()
-    f = open("sf.txt", "a")
-    f.write("\n")
-    f.write(str(date))
-    f.write("\t")
-    f.write(":")
-    f.write("\t")
-    f.write(Excersize_name)
-    f.close()
+    print("follow the food chart giver by Gym\n")
 
-def harry_food_show():
+def food_show(b):
     f = open("hf.txt")
     content = f.read()
     print(content)
 
     f.close()
 
-def Vaibhav_food_show():
-    f = open("vf.txt")
-    content = f.read()
-    print(content)
 
-    f.close()
-
-def samarth_food_show():
-    f = open("sf.txt")
-    content = f.read()
-    print(content)
-
-    f.close()
 #adding new member function new here
 def New():
 
-    name = input("What is your Fullname ==>>")
-    age =  input("What is your Age ==>>")
+ name = input("What is your Name (Ex. vaibhav .v.m) ==>>")
+ age =  input("What is your Age ==>>")
+ cat = int(input("PRess 1 for Excersize And Press 2 for food"))
+ if(cat == 1):
+     file2 = "e.txt"
+ if(cat == 2):
+     file2 = "f.txt"
 
-    file2 = ".txt"
-    file1 = (name + file2)
-    f = open(file1, "a")
-    date = str(getdate())
+     file1 = (name + file2)
+     f = open(file1, "a")
+     date = str(getdate())
 
-    f.write("Following is the information of ")
-    f.write(name)
-    f.write("\t\t\t\t\t\t")
-    f.write(date)
-    f.write("\n")
-    f.write("name:\t")
+     f.write("Following is the information of ")
+     f.write(name)
+     f.write("\t\t\t\t\t\t")
+     f.write(date)
+     f.write("\n")
+     f.write("name:\t")
 
-    f.write(name)
-    f.write("\n")
-    f.write("Age : \t")
-    f.write(age)
+     f.write(name)
+     f.write("\n")
+     f.write("Age : \t")
+     f.write(age)
 
-    f.close()
+     f.close()
 
 
 
 work=1
-while (work <= 9):
+while (work <= 50):
  print("What do You Want To Chnage Or Show  ")
  print("press 1 for Excersize ")
  print("press 2 for Food ")
@@ -164,55 +105,70 @@ while (work <= 9):
            print("1-retrive or 11-Show For Harry ")
            print("2-retrive or 22-Show for Vaibhav")
            print("3-retrive or 33-Show for Samrth")
-
+           print("4 for Others\n")
+           a1 = "he.txt"
+           a2 = "ve.txt"
+           a3 = "se.txt"
            user_name = int(input("==>>>"))
            if(user_name == 1):
-               harry_exc()
-               print("well Done Keep up\n")
+               exc(a1)
            if (user_name == 2):
-               Vaibhav_exc()
-               print("well Done Keep up\n")
+               exc(a2)
            if (user_name == 3):
-               samarth_exc()
-               print("well Done Keep up\n")
+               exc(a3)
            if (user_name == 11):
-               harry_exc_show()
-               print("well Done Keep up\n")
+               exc_show(a1)
            if (user_name == 22):
-               Vaibhav_exc_show()
-               print("well Done Keep up\n")
+               exc_show(a2)
            if (user_name == 33):
-               samarth_exc_show()
-               print("well Done Keep up\n")
-
-
+               exc_show(a3)
+           if (user_name == 4):
+               print("1 For Record and 11 For Show Record \n")
+               user_other = int(input("PLZ ENTER THE NUMBER==>>>"))
+               if (user_other == 1):
+                   user_response = input("Enter Your name Same as Registraion")
+                   n = user_response + "e.txt"
+                   exc(n)
+               if (user_other == 11):
+                   user_response = input("Enter Your name Same as Registraion")
+                   n = user_response + "e.txt"
+                   exc_show(n)
 # food data
-
  if(user_input1 == 2):
          print("Whos Food You want to retrive or Show\n")
          print("1-retrive or 11-Show For Harry ")
          print("2-retrive or 22-Show for Vaibhav")
          print("3-retrive or 33-Show for Samrth")
+         print("4 for Others\n")
+         b1 = "hf.txt"
+         b2 = "vf.txt"
+         b3 = "sf.txt"
+         user_name = int(input("PLZ ENTER THE NUMBER ===>>>"))
+         if (user_name == 1):
+             food(b1)
+         if (user_name == 2):
+             food(b2)
+         if (user_name == 3):
+             food(b3)
+         if (user_name == 11):
+             food_show(b1)
+         if (user_name == 22):
+             food_show(b2)
+         if (user_name == 33):
+             exc_show(b3)
+         if (user_name == 4):
+             print("1 For Record and 2 For Show Record \n")
+             user_other = int(input("PLZ ENTER THE NUMBER==>>>"))
+             if(user_other == 1):
+                 user_response = input("Enter Your name Same as Registraion")
+                 n = user_response + "f.txt"
+                 food(n)
+             if(user_other == 11):
+                 user_response = input("Enter Your name Same as Registraion")
+                 n = user_response + "f.txt"
+                 food_show(n)
 
-         user_name = int(input("==>>>"))
-         if (user_name == 1):
-             harry_food()
-             print("follow the food chart giver by Gym\n")
-         if (user_name == 2):
-             Vaibhav_food()
-             print("follow the food chart giver by Gym\n")
-         if (user_name == 3):
-             samarth_food()
-             print("follow the food chart giver by Gym\n")
-         if (user_name == 1):
-             harry_food_show()
-             print("follow the food chart giver by Gym\n")
-         if (user_name == 2):
-             Vaibhav_food_show()
-             print("follow the food chart giver by Gym\n")
-         if (user_name == 3):
-             samarth_exc_show()
-             print("follow the food chart giver by Gym\n")
+
 
 
 
