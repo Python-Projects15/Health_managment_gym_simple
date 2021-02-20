@@ -13,6 +13,8 @@ def harry_exc():
     f.write("\n")
     f.write(str(date))
     f.write("\t")
+    f.write(":")
+    f.write("\t")
     f.write(Excersize_name)
 
     f.close()
@@ -23,6 +25,8 @@ def Vaibhav_exc():
     f.write("\n")
     f.write(str(date))
     f.write("\t")
+    f.write(":")
+    f.write("\t")
     f.write(Excersize_name)
     f.close()
 def samarth_exc():
@@ -31,6 +35,8 @@ def samarth_exc():
     f = open("se.txt", "a")
     f.write("\n")
     f.write(str(date))
+    f.write("\t")
+    f.write(":")
     f.write("\t")
     f.write(Excersize_name)
     f.close()
@@ -68,6 +74,8 @@ def harry_food():
     f.write("\n")
     f.write(str(date))
     f.write("\t")
+    f.write(":")
+    f.write("\t")
     f.write(Excersize_name)
     f.close()
 def Vaibhav_food():
@@ -77,6 +85,8 @@ def Vaibhav_food():
     f.write("\n")
     f.write(str(date))
     f.write("\t")
+    f.write(":")
+    f.write("\t")
     f.write(Excersize_name)
     f.close()
 def samarth_food():
@@ -85,6 +95,8 @@ def samarth_food():
     f = open("sf.txt", "a")
     f.write("\n")
     f.write(str(date))
+    f.write("\t")
+    f.write(":")
     f.write("\t")
     f.write(Excersize_name)
     f.close()
@@ -109,6 +121,30 @@ def samarth_food_show():
     print(content)
 
     f.close()
+#adding new member function new here
+def New():
+
+    name = input("What is your Fullname ==>>")
+    age =  input("What is your Age ==>>")
+
+    file2 = ".txt"
+    file1 = (name + file2)
+    f = open(file1, "a")
+    date = str(getdate())
+
+    f.write("Following is the information of ")
+    f.write(name)
+    f.write("\t\t\t\t\t\t")
+    f.write(date)
+    f.write("\n")
+    f.write("name:\t")
+
+    f.write(name)
+    f.write("\n")
+    f.write("Age : \t")
+    f.write(age)
+
+    f.close()
 
 
 
@@ -118,6 +154,7 @@ while (work <= 9):
  print("press 1 for Excersize ")
  print("press 2 for Food ")
  print("press 3 for EXIT")
+ print("press 4 for New Admission")
  user_input1 = int(input("==>>>"))
 
 #Excersize Data
@@ -183,8 +220,11 @@ while (work <= 9):
 
 
 
- if(user_input1 != 1 and user_input1 != 2 and user_input1 != 3):
+ if(user_input1 != 1 and user_input1 != 2 and user_input1 != 3 and user_input1!= 4):
     print("You Enter Wrong one")
 
+ if(user_input1 == 4):
+     New()
+     print("Thanks for show interset in our gym ..We will update your name soon \n")
  if(user_input1 == 3):
      exit()
