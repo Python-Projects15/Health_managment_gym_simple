@@ -36,9 +36,11 @@ def exc_show(a):
 
 
 def food(b):
-    Excersize_name = input("Which Food You ate ",b," ==>>")
+    print("Which Food You ate ",b[0:7])
+    Excersize_name = input(" ==>>")
     date = getdate()
     f = open(b, "a")
+    f.write("Following is List of Food You eat")
     f.write("\n")
     f.write("[")
     f.write(str(date))
@@ -51,7 +53,7 @@ def food(b):
     print("follow the food chart giver by Gym\n")
 
 def food_show(b):
-    f = open("hf.txt")
+    f = open(b)
     content = f.read()
     print(content)
 
@@ -101,7 +103,7 @@ while (work <= 50):
 #Excersize Data
 
  if(user_input1 == 1):
-           print("Whos excersixe You want to retrive\n")
+           print("WELCOME TO SAM GYM DATABASE ")
            print("1-retrive or 11-Show For Harry ")
            print("2-retrive or 22-Show for Vaibhav")
            print("3-retrive or 33-Show for Samrth")
@@ -135,7 +137,7 @@ while (work <= 50):
                    exc_show(n)
 # food data
  if(user_input1 == 2):
-         print("Whos Food You want to retrive or Show\n")
+         print("Whos Food You want to Save record or Show Record\n")
          print("1-retrive or 11-Show For Harry ")
          print("2-retrive or 22-Show for Vaibhav")
          print("3-retrive or 33-Show for Samrth")
@@ -163,10 +165,12 @@ while (work <= 50):
                  user_response = input("Enter Your name Same as Registraion")
                  n = user_response + "f.txt"
                  food(n)
-             if(user_other == 11):
+             if(user_other == 2):
                  user_response = input("Enter Your name Same as Registraion")
                  n = user_response + "f.txt"
                  food_show(n)
+             if(user_other != 1 and user_other != 2):
+                 print("Plz Enter Coreect Number")
 
 
 
